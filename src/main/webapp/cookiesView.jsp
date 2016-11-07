@@ -17,16 +17,10 @@
     <body bgcolor="#f0f0f0">
 
 
-        <%
-            List nameList = (List) request.getAttribute("cookiesArray");
-            //Esta linea es imprescindible!!!!!
-            pageContext.setAttribute("nameList", nameList);
-        %>
 
-
-        <c:if test="${ nameList.size() > 0 }">
+        <c:if test="${ cookiesArray.size() > 0 }">
             <h2> Found Cookies Name and Value</h2>
-            <c:forEach items="${nameList}" var="name">
+            <c:forEach items="${cookiesArray}" var="name">
                 <c:out value="${name.name}"/>
                 <c:out value="${name.value}"/>
                 <p>hola</p>
