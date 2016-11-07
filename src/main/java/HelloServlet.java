@@ -1,4 +1,5 @@
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,6 +27,20 @@ public class HelloServlet extends HttpServlet {
 
         String first_name = request.getParameter("first_name");
         String last_name = request.getParameter("last_name");
+
+        // Create cookies for first and last names.
+        Cookie firstName = new Cookie("first_name",
+                first_name);
+        Cookie lastName = new Cookie("last_name",
+                last_name);
+
+        // Set expiry date after 24 Hrs for both the cookies.
+        firstName.setMaxAge(60*60*24);
+        lastName.setMaxAge(60*60*24);
+
+        // Add both the cookies in the response header.
+        response.addCookie( firstName );
+        response.addCookie( lastName );
 
         // Set response content type
         response.setContentType("text/html");
