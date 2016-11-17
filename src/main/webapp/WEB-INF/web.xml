@@ -43,6 +43,10 @@
   <servlet>
     <servlet-name>view-headers</servlet-name>
     <servlet-class>ViewHeaderServlet</servlet-class>
+    <init-param>
+      <param-name></param-name>
+      <param-value></param-value>
+    </init-param>
   </servlet>
 
   <servlet>

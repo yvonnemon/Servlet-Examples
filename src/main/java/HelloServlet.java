@@ -17,6 +17,7 @@ public class HelloServlet extends HttpServlet {
     {
         // Do required initialization
         message = "Hello World";
+        Object o = Injector.object;
         System.out.println("Servlet " + HelloServlet.class.getName() + " OK");
 
     }
@@ -24,6 +25,10 @@ public class HelloServlet extends HttpServlet {
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
             throws ServletException, IOException {
+
+        PrintWriter out = response.getWriter();
+
+
 
         String first_name = request.getParameter("first_name");
         String last_name = request.getParameter("last_name");
@@ -45,7 +50,7 @@ public class HelloServlet extends HttpServlet {
         // Set response content type
         response.setContentType("text/html");
 
-        PrintWriter out = response.getWriter();
+
         String title = "Using POST Method to Read Form Data";
         String docType =
                 "<!doctype html public \"-//w3c//dtd html 4.0 " +
