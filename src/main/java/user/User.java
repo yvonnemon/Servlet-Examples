@@ -21,4 +21,12 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String nameToUpperCase(){
+        return name.toUpperCase();
+    }
+
+    public void toUpperCase(){
+         name.toUpperCase();
+    }
 }

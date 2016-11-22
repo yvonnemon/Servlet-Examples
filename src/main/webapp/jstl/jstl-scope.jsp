@@ -38,6 +38,9 @@
         <td>
             ${test}
             <p>user:${user.name}</p>
+            <!-- DUBTE ALBERT -->
+            <p>user:${user.nameToUpperCase()}</p>
+            ${user.toUpperCase()}
         </td>
     </tr>
     <tr>
