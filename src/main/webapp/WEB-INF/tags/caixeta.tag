@@ -11,3 +11,5 @@
         <p><%=cos%></p>
     </div>
 </div>
+
+<% if (!session.isNew()) { %> <h1>sesion null</h1> <%}%>
