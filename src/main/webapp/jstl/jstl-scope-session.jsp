@@ -9,9 +9,6 @@
 <body>
 
 
-
-
-
 <%  if ( request.getParameter("name") != null) {
         session.setAttribute("user_name", request.getParameter("name"));
     }

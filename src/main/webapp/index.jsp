@@ -4,11 +4,15 @@
 <html>
 <body>
 
+<% Cookie[] cookies = request.getCookies(); %>
+
 
 
 
 
 <%= request.getProtocol()%>
+
+
 
 <form action="/HelloUrl" method="POST">
     First Name: <input type="text" name="first_name">

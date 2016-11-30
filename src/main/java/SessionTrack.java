@@ -38,7 +38,6 @@ public class SessionTrack extends HttpServlet {
             userID = (String)session.getAttribute(userIDKey);
         }
         session.setAttribute(visitCountKey,  visitCount);
-
         // Set response content type
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
